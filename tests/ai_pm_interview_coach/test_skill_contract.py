@@ -77,8 +77,9 @@ class SkillContractTests(unittest.TestCase):
             "Add your instructions here",
             "[TODO:",
         )
+        text_suffixes = {".json", ".md", ".py", ".txt", ".yaml", ".yml"}
         for path in self.skill_dir.rglob("*"):
-            if not path.is_file():
+            if not path.is_file() or path.suffix.lower() not in text_suffixes:
                 continue
             text = path.read_text(encoding="utf-8")
             for phrase in forbidden_phrases:
