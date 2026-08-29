@@ -1,0 +1,7 @@
+interface:
+  display_name: "AI PM Interview Coach"
+  short_description: "Strict AI product manager interview preparation and review"
+  default_prompt: "Use $ai-pm-interview-coach to prepare for or review my interview using only the files and scope I explicitly provide."
+
+policy:
+  allow_implicit_invocation: false
